@@ -9,11 +9,13 @@ namespace Pets
     class Pet
     {
         public string name;
-        public string species;
+        public Specie species;
+        public string petArt;
 
-        public Pet(string name, string species)
+        public Pet(string name, Specie species)
             { this.name = name;
               this.species = species;
+          
             }
     }
 }

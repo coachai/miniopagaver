@@ -43,6 +43,9 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="3DVector.cs" />
+    <Compile Include="Person.cs" />
+    <Compile Include="Pet.cs" />
     <Compile Include="Specie.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
