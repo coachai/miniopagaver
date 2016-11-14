@@ -46,6 +46,9 @@
     <Compile Include="BinaryExpression.cs" />
     <Compile Include="ConstantExpression.cs" />
     <Compile Include="Expression.cs" />
+    <Compile Include="MinusExpression.cs" />
+    <Compile Include="MultiplyExpression.cs" />
+    <Compile Include="PlusExpression.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>

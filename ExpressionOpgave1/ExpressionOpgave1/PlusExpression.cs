@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 namespace ExpressionOpgave1
 {
     class PlusExpression : BinaryExpression
-    {
+    {  public PlusExpression(Expression left, Expression right) : base(left,right) { }
         protected override string OperatorSymbol
         {  
             get

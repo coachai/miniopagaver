@@ -8,6 +8,10 @@ namespace ExpressionOpgave1
 {
     class MultiplyExpression:BinaryExpression
     {
+        public MultiplyExpression(Expression left, Expression right) : base(left, right)
+        {
+        }
+
         protected override string OperatorSymbol
         {
             get

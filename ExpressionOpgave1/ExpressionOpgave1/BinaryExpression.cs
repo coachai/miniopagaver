@@ -8,17 +8,21 @@ namespace ExpressionOpgave1
 {
     abstract class BinaryExpression:Expression
     {
-        protected Expression left;
-        protected Expression right;
+        protected readonly Expression left;
+        protected readonly Expression right;
 
         protected abstract string OperatorSymbol { get; }
 
-
+        protected BinaryExpression(Expression left, Expression right)
+        { this.left = left;
+          this.right = right;
+        
+        }
 
       //  public  string ToString { get; }
         public sealed override string ToString()
         {
-            return string.Format("{0} {1} {2}",left, OperatorSymbol, right )   ;
+            return string.Format("{0} {1} {2}", "("+left.ToString() + "", OperatorSymbol + "", right.ToString()+")" )   ;
 
         }
     }

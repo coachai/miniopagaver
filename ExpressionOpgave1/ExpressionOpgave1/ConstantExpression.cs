@@ -14,8 +14,13 @@ namespace ExpressionOpgave1
 
         public sealed override string ToString()
         {
-            return value.ToString();
+            return this.value.ToString();
 
         }
+
+        public ConstantExpression(double value)
+        { this.value = value; }
+
+
     }
 }
