@@ -1,0 +1,95 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="XamlSamples.HelloXamlPage"
+             
+             Title="Text Xaml Page">
+  <ContentPage.Padding>
+    <OnPlatform x:TypeArguments="Thickness"
+        iOS="0, 20, 0, 0" />
+  
+  </ContentPage.Padding>
+  <StackLayout>
+    
+    <Slider VerticalOptions="CenterAndExpand" ValueChanged="OnSlideValueChanged" />
+
+    <Label Text="A Simple Label!"
+           Font="Large"
+           x:Name ="valueLabel"
+           HorizontalOptions="Center"
+           VerticalOptions="CenterAndExpand"
+           FontAttributes="Bold"
+       FontSize="Large">
+
+      <Label.TextColor>Aqua</Label.TextColor>
+    </Label>
+    
+    <Grid>
+      <Grid.RowDefinitions>
+        <RowDefinition Height="Auto"/>
+        <RowDefinition Height="*"/>
+        <RowDefinition Height="100"/>
+      </Grid.RowDefinitions>
+      <Grid.ColumnDefinitions>
+        <ColumnDefinition Width="Auto"/>
+        <ColumnDefinition Width="*"/>
+        <ColumnDefinition Width="100"/>
+      </Grid.ColumnDefinitions>
+    
+    <Label Text="Autosize cell"
+           Grid.Row="0" Grid.Column="0"
+           TextColor="White"
+           BackgroundColor="Blue"/>
+      <BoxView Color="Silver" HeightRequest="0" Grid.Row="0" Grid.Column="1"/>
+      <BoxView Color="Black" Grid.Row="1" Grid.Column="0"/>
+      <Label Text ="Left Over Space" Grid.Row="1" Grid.Column="1" TextColor="Purple" BackgroundColor="Aqua"
+             HorizontalTextAlignment="Center" VerticalTextAlignment="Center"/>
+       <Label Text="Span two rows (or more if you want)"
+           Grid.Row="1" Grid.Column="2" Grid.RowSpan="2"
+           TextColor="Yellow"
+           BackgroundColor="Blue"
+           HorizontalTextAlignment="Center"
+           VerticalTextAlignment="Center" />
+      <Label Text="Span two columns" Grid.Row="2" Grid.Column="0" Grid.ColumnSpan="2" 
+             TextColor="Blue" BackgroundColor="Yellow" HorizontalTextAlignment="Center" VerticalTextAlignment="Center"/>
+      <Label Text="Fixed 100x100"
+           Grid.Row="2" Grid.Column="2"
+           TextColor="Aqua"
+           BackgroundColor="Red"
+           HorizontalTextAlignment="Center"
+           VerticalTextAlignment="Center" />
+           
+    </Grid>
+    <AbsoluteLayout BackgroundColor="#FF8080">
+      <BoxView Color="#8080FF"
+               AbsoluteLayout.LayoutBounds="0.33,0,0.25,0.25"
+               AbsoluteLayout.LayoutFlags="All" />
+      <BoxView Color="#8080FF"
+              AbsoluteLayout.LayoutBounds="1,0,0.25,0.25"
+               AbsoluteLayout.LayoutFlags="All" />
+    <BoxView Color="#8080FF"
+              AbsoluteLayout.LayoutBounds="0,0.33,0.25,0.25"
+               AbsoluteLayout.LayoutFlags="All" />
+    <BoxView Color="#8080FF"
+              AbsoluteLayout.LayoutBounds="0.67,0.33,0.25,0.25"
+               AbsoluteLayout.LayoutFlags="All" />
+      <BoxView Color="#8080FF"
+              AbsoluteLayout.LayoutBounds="0.33,0.67,0.25,0.25"
+               AbsoluteLayout.LayoutFlags="All" />
+     <BoxView Color="#8080FF"
+              AbsoluteLayout.LayoutBounds="1,0.67,0.25,0.25"
+               AbsoluteLayout.LayoutFlags="All" />
+       <BoxView Color="#8080FF"
+              AbsoluteLayout.LayoutBounds="0,1,0.25,0.25"
+               AbsoluteLayout.LayoutFlags="All" />
+       <BoxView Color="#8080FF"
+              AbsoluteLayout.LayoutBounds="0.67,1,0.25,0.25"
+               AbsoluteLayout.LayoutFlags="All" />
+    
+    </AbsoluteLayout>
+  <Button Text="Click Me"
+          HorizontalOptions="Center"
+          VerticalOptions="CenterAndExpand" 
+          Clicked="OnButtonClicked"/>
+  </StackLayout>
+</ContentPage>
