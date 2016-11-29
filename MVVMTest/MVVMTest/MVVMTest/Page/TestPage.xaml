@@ -1,0 +1,21 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="MVVMTest.Page.TestPage">
+  <ScrollView x:Name="ImageScrollView" Text="ImageScrollView">
+  <StackLayout>
+
+  <Label x:Name="VersionTextLabel"  Text="{Binding VersionText}" HorizontalOptions="Center"></Label> 
+  <Entry  x:Name ="StatusEntry"  Text="{Binding StatusText,Mode=OneWayToSource}" Placeholder="Indtast telefonenummer"/>
+  <Button x:Name ="LoginOkButton" Text="LogIn"    IsEnabled="{Binding LoginOK}"     
+           BorderWidth="3"       
+           TextColor="Red"
+           Font="Large" />
+    <Label Text="Image UriSource Xaml" />
+    <Image Source="https://xamarin.com/content/images/pages/forms/example-app.png" />
+    <Label Text="example-app.png gets downloaded from xamarin.com" />
+
+   
+  </StackLayout>
+    </ScrollView>
+</ContentPage>
