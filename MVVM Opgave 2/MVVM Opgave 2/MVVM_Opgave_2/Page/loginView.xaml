@@ -1,0 +1,13 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="MVVM_Opgave_2.loginView">
+  <StackLayout>
+    <Label x:Name="VersionsTekst" Text="VersionsTekst"></Label>
+    <Label x:Name="Statustekst" Text="Statustekst"></Label>
+    <Entry x:Name="LoginEntry" Placeholder="LoginEntry"></Entry>
+    <Label x:Name="LoginKnap" Entry="LoginKnap"></Label>
+    <Button x:Name ="TestButton" Text="Ok"></Button>
+  </StackLayout>
+  <Label Text="{Binding MainText}" VerticalOptions="Center" HorizontalOptions="Center" />
+</ContentPage>

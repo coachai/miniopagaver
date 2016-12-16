@@ -1,0 +1,110 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+       xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+       x:Class="WeatherApp.WeatherPage">
+  <Grid>
+    <Grid.RowDefinitions>
+      <RowDefinition Height="*" />
+      <RowDefinition Height="*" />
+      <RowDefinition Height="*" />
+     
+    </Grid.RowDefinitions>
+    <Grid.ColumnDefinitions>
+      <ColumnDefinition Width="*" />
+      <ColumnDefinition Width="*" />
+      <ColumnDefinition Width="*" />
+      <ColumnDefinition Width="*" />
+
+      <ColumnDefinition Width="*" />
+      <ColumnDefinition Width="*" />
+      <ColumnDefinition Width="*" />
+      <ColumnDefinition Width="*" />
+
+      <ColumnDefinition Width="*" />
+      <ColumnDefinition Width="*" />
+      <ColumnDefinition Width="*" />
+      <ColumnDefinition Width="*" />
+
+    </Grid.ColumnDefinitions>
+    
+    <!-- Set iOS colors; use defaults on other platforms -->
+    <ContentPage.Resources>
+      <ResourceDictionary>
+        <Style x:Key="labelStyle" TargetType="Label">
+          <Setter Property="TextColor" Value="#a8a8a8" />
+          <Setter Property="FontSize" Value="Small" />
+        </Style>
+      
+      </ResourceDictionary>
+    </ContentPage.Resources>
+    
+    <StackLayout Grid.Row="0" Grid.Column="0" Grid.ColumnSpan="12">
+      <Label Text="Search by Zip Code" TextColor="White" FontAttributes="Bold"/>
+      
+    </StackLayout>
+
+    <StackLayout Grid.Row="1" Grid.Column="0" Grid.ColumnSpan="3"  HorizontalOptions="FillAndExpand" >
+    <Label Text="Demo the Grid1"    FontSize="Small" BackgroundColor="Red"  />
+      <AbsoluteLayout>
+        <BoxView Color="Yellow" WidthRequest="50" HeightRequest="50" />
+        
+        <Label Text="Yellow" Font="25" />
+        <Image Source="icon.png" />
+      </AbsoluteLayout>
+
+
+
+    </StackLayout>
+    <StackLayout Grid.Row="1" Grid.Column="3" Grid.ColumnSpan="3" HorizontalOptions="FillAndExpand">
+    <Label Text="Demo the Grid2"    FontSize="Small" BackgroundColor="Gray"  />
+    </StackLayout>
+    <StackLayout Grid.Row="1" Grid.Column="6" Grid.ColumnSpan="3" HorizontalOptions="FillAndExpand">
+    <Label Text="Demo the Grid3"    FontSize="Small" BackgroundColor="Green"  />
+    </StackLayout>
+    <StackLayout Grid.Row="1" Grid.Column="9" Grid.ColumnSpan="3" HorizontalOptions="FillAndExpand">
+      <Label Text="Demo the Grid3"    FontSize="Small" BackgroundColor="Green"  />
+    </StackLayout>
+    
+    <StackLayout Grid.Row="2" Grid.Column="0" Grid.ColumnSpan="4" HorizontalOptions="FillAndExpand">
+
+      <Label Text="Demo the Grid1"    FontSize="Small" BackgroundColor="Red"  />
+      <Label Text="Yellow" Font="25" />
+      <Image Source="icon.png" />
+   
+    </StackLayout>
+    <StackLayout Grid.Row="2" Grid.Column="4" Grid.ColumnSpan="4" HorizontalOptions="FillAndExpand">
+      
+      <Label Text="Demo the Grid2"    FontSize="Small" BackgroundColor="Gray"  />
+      <Label Text="Yellow" Font="25" />
+      <Image Source="icon.png" />
+      
+    </StackLayout>
+    <StackLayout Grid.Row="2" Grid.Column="8" Grid.ColumnSpan="4" HorizontalOptions="FillAndExpand">
+     
+      <Label Text="Demo the Grid3"    FontSize="Small" BackgroundColor="Green"  />
+      <Image Source="icon.png" />
+      <Label Text="Yellow" Font="25" />
+
+
+    </StackLayout>
+    
+    
+    
+    
+
+          
+
+     
+  </Grid>
+  <BoxView x:Name="hackBoxView" Color="Transparent"
+              RelativeLayout.WidthConstraint="{ConstraintExpression Type=RelativeToParent,Property=Width,Factor=1,Constant=0}"
+                RelativeLayout.HeightConstraint="{ConstraintExpression Type=RelativeToParent,Property=Height,Factor=1,Constant=0}">
+           <BoxView.GestureRecognizers>
+              <TapGestureRecognizer Tapped="OnTapped"/>
+      
+    </BoxView.GestureRecognizers>
+    
+  </BoxView>
+
+
+</ContentPage>

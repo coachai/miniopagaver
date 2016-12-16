@@ -1,0 +1,28 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:local="clr-namespace:App5MVVM"
+             xmlns:sys="clr-namespace:System;assembly=mscorlib"
+             x:Class="App5MVVM.ClockPage">
+
+  <Label Text="Welcome to Xamarin Forms!"
+           VerticalOptions="Center"
+           HorizontalOptions="Center" />
+
+  <!--<Label Text="{Binding DateTime,
+                         StringFormat='The Second is {0:T}'}" 
+   
+                FontSize="Large"
+       HorizontalOptions="Center"
+       VerticalOptions="Center">
+    --><!--<Label Text="{Binding DateTime.Second,
+                        StringFormat='{0}'}"/>--><!--
+    --><!--<Label Text="{Binding DateTime.Month,StringFormat='The month is {0:MMMM}'}" />
+    <Label Text="{Binding DateTime.Day, StringFormat='The day is {0}'}" />
+    <Label Text="{Binding DateTime.Now, StringFormat='The time is {0:T}'}" />--><!--
+
+    --><!--<Label.BindingContext>
+      <local:ClockViewModel></local:ClockViewModel>
+    </Label.BindingContext>--><!--
+  </Label>-->
+</ContentPage>
